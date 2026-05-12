@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  color-scheme: light;
+  --bg: #f3f5fb;
+  --card: #ffffff;
+  --display-bg: #edf1ff;
+  --text-main: #1f2333;
+  --text-soft: #6a728f;
+  --key-bg: #f4f6fd;
+  --key-hover: #e6ecfa;
+  --operator-bg: #4d6bff;
+  --operator-hover: #3f5df1;
+  --action-bg: #dfe5ff;
+  --action-text: #3045a6;
+  --shadow: 0 18px 40px rgba(52, 67, 132, 0.15);
+}
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #12141d;
+    --card: #1a1f2d;
+    --display-bg: #111624;
+  }
+} */
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family:
+    inter system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  background:
+    radial-gradient(circle at top right, #9fb4ff22, transparent 45%), var(--bg);
+  color: var(--text-main);
+}
+
+.apps {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+.Calculator {
+  width: min(100%, 360px);
+  background: var(--card);
+  border-radius: 24px;
+  padding: 10px;
+  box-shadow: var(--shadow);
+}
+.display {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: var(--display-bg);
+  border-radius: 16px;
+  padding: 16px;
+  text-align: right;
+  margin-bottom: 14px;
+  color: var(--text-main);
+  font-size: 2.3rem;
+  line-height: 1;
+  font-weight: 700;
+}
+.display::placeholder {
+  color: var(--text-soft);
+}
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.key {
+  border: 0;
+  border-radius: 12px;
+  background: var(--key-bg);
+  color: var(--text-main);
+  padding: 14px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.18s ease,
+    transform 0.6s ease;
+}
+.key:hover {
+  background: var(--key-hover);
+}
+.key.active {
+  transform: scale(0.97);
+}
+.operator,
+.equals {
+  background: var(--operator-bg);
+  color: #ffffff;
+}
+.operator:hover,
+.equals:hover {
+  background: var(--operator-hover);
+}
+.action {
+  background: var(--action-bg);
+  color: var(--action-text);
+}
+.span-2 {
+  grid-column: span 2;
+}
+
+@media screen and (max-width: 400px) {
+  .Calculator {
+    padding: 14px;
+  }
+  .key {
+    padding: 12px;
+  }
+}

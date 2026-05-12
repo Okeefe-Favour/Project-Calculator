@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="apps">
+      <section class="Calculator" aria-label="simple calculator">
+        <input
+          type="text"
+          class="display"
+          value=""
+          aria-label="calculator display"
+          placeholder="0"
+          readonly
+        />
+        <div class="keys" aria-label="Calculator keys">
+          <button class="key action">AC</button>
+          <button class="key action">DEL</button>
+          <button class="key action percent">%</button>
+          <button class="key operator">/</button>
+
+          <button class="key">7</button>
+          <button class="key">8</button>
+          <button class="key">9</button>
+          <button class="key operator">*</button>
+
+          <button class="key">4</button>
+          <button class="key">5</button>
+          <button class="key">6</button>
+          <button class="key operator">-</button>
+
+          <button class="key">1</button>
+          <button class="key">2</button>
+          <button class="key">3</button>
+          <button class="key operator">+</button>
+
+          <button class="key span-2">0</button>
+          <button class="key">.</button>
+          <button class="key equals">=</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
