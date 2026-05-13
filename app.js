@@ -3,6 +3,9 @@ const buttonAll = document.querySelector(".keys");
 console.log(buttonAll);
 const displayCalc = document.querySelector(".display");
 console.log(displayCalc);
+const toggleBtn = document.querySelector(".dark-toggle");
+console.log(toggleBtn);
+
 buttonAll.addEventListener("click", (e) => {
   //not to respond incase the user does not click any button by error
   if (!e.target.classList.contains("key")) return;
@@ -31,8 +34,8 @@ buttonAll.addEventListener("click", (e) => {
   }
 
   console.log(e.target);
-    console.log(e.target.textContent);
-    
+  console.log(e.target.textContent);
+
   // to take 0 if it was added fro the beginning
 
   if (displayCalc.value.startsWith("0")) {
@@ -40,3 +43,31 @@ buttonAll.addEventListener("click", (e) => {
   }
   displayCalc.value += e.target.textContent;
 });
+
+if (toggleBtn) {
+  toggleBtn.addEventListener("click", () => {
+    const root = document.documentElement;
+    const isDark = root.getAttribute("dark-theme") === "dark";
+
+    if (isDark) {
+      root.removeAttribute("dark-theme");
+    } else {
+      root.setAttribute("dark-theme", "dark");
+    }
+  });
+}
+
+// if (toggleBtn) {
+//   toggleBtn.addEventListener("click", () => {
+//     const root = document.documentElement;
+//     const isDark = root.getAttribute("dark-theme") === "dark";
+
+//     if (isDark) {
+//       root.removeAttribute("dark-theme");
+//       toggleBtn.classList.remove("rotated");
+//     } else {
+//       root.setAttribute("dark-theme", "dark");
+//       toggleBtn.classList.add("rotated");
+//     }
+//   });
+// }
