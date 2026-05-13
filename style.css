@@ -24,7 +24,7 @@
   --bg: #0f111a;
   --card: #161925;
   --dg-bg: #1d2136;
-  --text-main: #f3f5fb;
+  --text-main: red;
   --key-bg: 1f2336;
   --key-hover: #292f4c;
   --operator-bg: #4d6bff;
@@ -33,7 +33,6 @@
   --action-text: #9bb0ff;
   --shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
 }
-
 
 /* @media (prefers-color-scheme: dark) {
   :root {
